@@ -1,17 +1,60 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.suo
+*.ipch
+*.sdf
+*.opensdf
+*.*~
+*.[Cc]ache
+obj/
+Perf*Logs/
+AppPackages/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+build*/
+build-temp*/
+archive*/
+project.lock.json
+*.vs/
+*.fake/
+*BundleArtifacts/
+RepositoryInfo.cs
+Di2Container.generated.cs
 
-# Custom for Visual Studio
-*.cs     diff=csharp
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+build.*.build.log
 
-# Standard to msysgit
-*.doc	 diff=astextplain
-*.DOC	 diff=astextplain
-*.docx diff=astextplain
-*.DOCX diff=astextplain
-*.dot  diff=astextplain
-*.DOT  diff=astextplain
-*.pdf  diff=astextplain
-*.PDF	 diff=astextplain
-*.rtf	 diff=astextplain
-*.RTF	 diff=astextplain
+[Nn][Ll]og.config
+*.dotCover
+
+Tools/MarketBrowserTest/*
+*packages/
+Tools/FAKE/*
+
+*/PhoneControllerRTProxyStub/*.c
+*/PhoneControllerRTProxyStub/*.h
+*/PhoneControllerRTProxyStub/*.winmd
+*/Viber.Phone.Agents/RegistrationHelper.cs
+*/Viber.Phone/PhoneControllerRTProxyStub.*
+*.orig
+*/PrecompiledLibs/*/*.pdb
+*/PrecompiledLibs/*/*.idb
+*.sln.ide/
+
+#build keys
+
+*.МамойКлянусь
+*.КрексФексПекс
+*.pd_
+*.ncrunchproject
+*/_NCrunch_Viber/*
+*.ncrunchsolution
+UidSyncronization.log
+*.nuget.targets
+
+*.VC.opendb

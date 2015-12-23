@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+<<<<<<< HEAD
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,6 +23,16 @@
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <TextBlock Text="Address: " Style="{StaticResource BasicTextStyle}" Margin="0,6,5,0" HorizontalAlignment="Left"/>
                 <TextBox x:Name="AddressField" Text="https://news.yandex.ru/quotes/1006.xml" MaxWidth="380"/>
+=======
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel x:Name="contentPanel" Margin="0,0,0,0">
+            <TextBlock Text="ЗЧМ" Margin="0,0,0,40"/>
+   
+            <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,276,20">
+                
+                <Button x:Name="inputButton" Content="Герра ПА" Click="inputButton_Click"/>
+				<Border Background="Red" Width="40" Height="40"/>
+>>>>>>> refs/remotes/origin/parsing
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Grid.Row="2">
                 <Button Content="Start" x:Name="StartButton" Margin="0,0,10,0" Click="Start_Click"/>
