@@ -7,15 +7,41 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel x:Name="contentPanel" Margin="0,0,0,0">
-            <TextBlock Text="ЗЧМ" Margin="0,0,0,40"/>
-   
-            <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,276,20">
-                
-                <Button x:Name="inputButton" Content="Герра ПА" Click="inputButton_Click"/>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="Input" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="InputTextBlock1" Grid.Row="0" TextWrapping="Wrap" Style="{StaticResource BasicTextStyle}" HorizontalAlignment="Left">ГЕРРА ПА.</TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <TextBlock Text="Address: " Style="{StaticResource BasicTextStyle}" Margin="0,6,5,0" HorizontalAlignment="Left"/>
+                <TextBox x:Name="AddressField" Text="https://news.yandex.ru/quotes/1006.xml" MaxWidth="380"/>
             </StackPanel>
-            <TextBlock x:Name="greetingOutput"/>
-        </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Grid.Row="2">
+                <Button Content="Start" x:Name="StartButton" Margin="0,0,10,0" Click="Start_Click"/>
+                <Button Content="Cancel" x:Name="CancelButton" IsEnabled="False" Click="Cancel_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="Output" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="OutputField" AcceptsReturn="True" TextWrapping="Wrap"/>
+            <ListBox x:Name="OutputList" Grid.Column="1" Margin="10,0,0,0"/>
+        </Grid>
+        <!-- Add Storyboards to the visual states below as necessary for supporting the various layouts -->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="DefaultLayout"/>
+                <VisualState x:Name="Below768Layout"/>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
     </Grid>
 </Page>
